@@ -68,11 +68,11 @@ public class BottomFragment extends Fragment
         tvCreate= (TextView) view.findViewById(R.id.tvcreate);
         tvStart= (TextView) view.findViewById(R.id.tvstart);
 
-        tvCreate.setText("OnCreate Executed");
-        tvStart.setText("OnStart Executed");
+        tvCreate.setText(R.string.bottomFragCreate);
+        tvStart.setText(R.string.bottomFragStart);
 
         Context context = getActivity().getApplicationContext();
-        CharSequence text = "Bottom Fragment OnCreateView";
+        CharSequence text = getString(R.string.bottomToastCreate);
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
@@ -86,7 +86,7 @@ public class BottomFragment extends Fragment
         super.onStart();
 
         //Context context = getActivity().getApplicationContext();
-        CharSequence text = "Bottom Fragment OnStart";
+        CharSequence text = getString(R.string.bottomToastStart);
         //int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(getActivity().getApplicationContext(), text,
                 Toast.LENGTH_SHORT);

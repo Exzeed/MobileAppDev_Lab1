@@ -23,8 +23,8 @@ public class TopFragment extends ListFragment
 {
     String[] activities = new String[]
     {
-        "AIActivity",
-        "VRActivity"
+            "AIActivity",
+            "VRActivity"
     };
 
     // TODO: Rename parameter arguments, choose names that match
@@ -76,7 +76,7 @@ public class TopFragment extends ListFragment
                 android.R.layout.simple_list_item_1, activities);
         setListAdapter(adapter);
 
-        CharSequence text = "Top Fragment OnCreateView";
+        CharSequence text = getString(R.string.topToastCreate);
         Toast toast = Toast.makeText(getActivity().getApplicationContext(), text,
                 Toast.LENGTH_SHORT);
         toast.show();
@@ -90,7 +90,7 @@ public class TopFragment extends ListFragment
         super.onStart();
 
         //Context context = getActivity().getApplicationContext();
-        CharSequence text = "Top Fragment OnStart";
+        CharSequence text = getString(R.string.topToastStart);
         //int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(getActivity().getApplicationContext(), text,
                 Toast.LENGTH_SHORT);
@@ -113,9 +113,5 @@ public class TopFragment extends ListFragment
                 startActivity(intent);
                 break;
         }
-
-        /*BottomFragment fragment = (BottomFragment) getFragmentManager().findFragmentById(R.id.fragment_bottom);
-        fragment.display(activities[position], "Definition : " + definition[position]);
-        getListView().setSelector(android.R.color.holo_blue_dark);*/
     }
 }

@@ -1,6 +1,20 @@
 <resources>
     <string name="app_name">geethankanthasamy_COMP304Lab1_Ex1</string>
+    <string name="topToastCreate">Top Fragment OnCreateView</string>
+    <string name="topToastStart">Top Fragment OnStart</string>
     <string name="title">Main Activity:</string>
-    <string name="aititle">AIActiviy:</string>
+    <string name="bottomToastCreate">Bottom Fragment OnCreateView</string>
+    <string name="bottomToastStart">Bottom Fragment OnStart</string>
+    <string name="bottomFragCreate">OnCreate Executed</string>
+    <string name="bottomFragStart">OnStart Executed</string>
+    <string name="aititle">AIActivity:</string>
+    <string name="aiCreate">onCreate Executed</string>
+    <string name="aiStart">onStart Executed</string>
+    <string name="aiStop">onStop Executed</string>
+    <string name="aiDestroy">onDestroy Executed</string>
     <string name="vrtitle">VRActivity:</string>
+    <string name="vrCreate">onCreate Executed</string>
+    <string name="vrStart">onStart Executed</string>
+    <string name="vrStop">onStop Executed</string>
+    <string name="vrDestroy">onDestroy Executed</string>
 </resources>
