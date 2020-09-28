@@ -1,5 +1,6 @@
 package com.example.labassignment1;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 //import androidx.fragment.app.Fragment;
@@ -96,10 +97,25 @@ public class TopFragment extends ListFragment
         toast.show();
     }
 
-    /*@Override
+    @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        BottomFragment fragment = (BottomFragment) getFragmentManager().findFragmentById(R.id.fragment_bottom);
+        Intent intent = null;
+
+        switch(activities[position])
+        {
+            case "AIActivity":
+                intent = new Intent(getActivity().getApplication(), AIActivity.class);
+                startActivity(intent);
+                break;
+
+            case "VRActivity":
+                intent = new Intent(getActivity().getApplication(), VRActivity.class);
+                startActivity(intent);
+                break;
+        }
+
+        /*BottomFragment fragment = (BottomFragment) getFragmentManager().findFragmentById(R.id.fragment_bottom);
         fragment.display(activities[position], "Definition : " + definition[position]);
-        getListView().setSelector(android.R.color.holo_blue_dark);
-    }*/
+        getListView().setSelector(android.R.color.holo_blue_dark);*/
+    }
 }
