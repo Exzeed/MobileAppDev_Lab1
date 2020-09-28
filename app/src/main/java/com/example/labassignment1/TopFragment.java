@@ -78,8 +78,8 @@ public class TopFragment extends ListFragment
 
     /*@Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        BottomFragment fragment = (BottomFragment)getFragmentManager().findFragmentById(R.id.definition_fragment);
-        fragment.display(activities[position],"Definition : "+definition[position]);
+        BottomFragment fragment = (BottomFragment) getFragmentManager().findFragmentById(R.id.fragment_bottom);
+        fragment.display(activities[position], "Definition : " + definition[position]);
         getListView().setSelector(android.R.color.holo_blue_dark);
     }*/
 }
