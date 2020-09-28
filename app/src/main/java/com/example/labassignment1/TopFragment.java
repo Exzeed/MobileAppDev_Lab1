@@ -2,18 +2,28 @@ package com.example.labassignment1;
 
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
+//import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import androidx.fragment.app.ListFragment;
 
 /**
- * A simple {@link Fragment} subclass.
+ * A simple {@link ListFragment} subclass.
  * Use the {@link TopFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TopFragment extends Fragment {
+public class TopFragment extends ListFragment
+{
+    String[] activities = new String[]
+    {
+        "AIActivity",
+        "VRActivity"
+    };
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +69,17 @@ public class TopFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_top, container, false);
+        View view = inflater.inflate(R.layout.fragment_top, container, false);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_list_item_1, activities);
+        setListAdapter(adapter);
+        return view;
     }
+
+    /*@Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        BottomFragment fragment = (BottomFragment)getFragmentManager().findFragmentById(R.id.definition_fragment);
+        fragment.display(activities[position],"Definition : "+definition[position]);
+        getListView().setSelector(android.R.color.holo_blue_dark);
+    }*/
 }
