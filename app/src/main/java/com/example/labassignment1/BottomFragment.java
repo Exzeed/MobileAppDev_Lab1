@@ -1,5 +1,6 @@
 package com.example.labassignment1;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -69,6 +71,25 @@ public class BottomFragment extends Fragment
         tvCreate.setText("OnCreate Executed");
         tvStart.setText("OnStart Executed");
 
+        Context context = getActivity().getApplicationContext();
+        CharSequence text = "Bottom Fragment OnCreateView";
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
         return view;
+    }
+
+    @Override
+    public void onStart()
+    {
+        super.onStart();
+
+        //Context context = getActivity().getApplicationContext();
+        CharSequence text = "Bottom Fragment OnStart";
+        //int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(getActivity().getApplicationContext(), text,
+                Toast.LENGTH_SHORT);
+        toast.show();
     }
 }

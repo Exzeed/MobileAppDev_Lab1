@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.fragment.app.ListFragment;
 
@@ -73,7 +74,26 @@ public class TopFragment extends ListFragment
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),
                 android.R.layout.simple_list_item_1, activities);
         setListAdapter(adapter);
+
+        CharSequence text = "Top Fragment OnCreateView";
+        Toast toast = Toast.makeText(getActivity().getApplicationContext(), text,
+                Toast.LENGTH_SHORT);
+        toast.show();
+
         return view;
+    }
+
+    @Override
+    public void onStart()
+    {
+        super.onStart();
+
+        //Context context = getActivity().getApplicationContext();
+        CharSequence text = "Top Fragment OnStart";
+        //int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(getActivity().getApplicationContext(), text,
+                Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     /*@Override
